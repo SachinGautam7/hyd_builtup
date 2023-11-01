@@ -1,11 +1,11 @@
 import streamlit as st
-import io
 
-def read_html_file(filename):
-  with io.open(filename, "r", encoding="utf-8") as f:
-    html = f.read()
-  return html
+path_to_html = "./hyd_builtup.html" 
 
-html = read_html_file("hyd_builtup/hyd_builtup.html")
+# Read file and keep in variable
+with open(path_to_html,'r') as f: 
+    html_data = f.read()
 
-st.components.html(html)
+## Show in webpage
+st.header("Show an external HTML")
+st.components.v1.html(html_data,height=200)
