@@ -7,4 +7,4 @@ with open(path_to_html,'r') as f:
     html_data = f.read()
 
 ## Show in webpage
-st.components.v1.html(html_data,height=100%,width=100%)
+st.components.v1.html(html_data,height=100,width=100)
