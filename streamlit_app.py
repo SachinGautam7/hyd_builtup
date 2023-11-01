@@ -1,13 +1,11 @@
 import streamlit as st
+import io
 
-def main():
+def read_html_file(filename):
+  with io.open(filename, "r", encoding="utf-8") as f:
+    html = f.read()
+  return html
 
-    # Read the HTML file into a string
-    with open("hyd_builtup/hyd_builtup.html", "r") as f:
-        html_string = f.read()
+html = read_html_file("hyd_builtup/hyd_builtup.html")
 
-    # Display the HTML file in Streamlit
-    st.components.html(html_string)
-
-if __name__ == "__main__":
-    main()
+st.components.html(html)
