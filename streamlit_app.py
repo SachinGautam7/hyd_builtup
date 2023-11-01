@@ -6,5 +6,4 @@ path_to_html = "./hyd_builtup.html"
 with open(path_to_html,'r') as f: 
     html_data = f.read()
 
-## Show in webpage
-st.components.v1.html(html_data,height=600, width=1500)
+st.markdown(html_data, unsafe_allow_html=True)
