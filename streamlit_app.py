@@ -8,4 +8,4 @@ with open(path_to_html,'r') as f:
 
 st.set_page_config(layout='wide')
 ## Show in webpage
-st.components.v1.html(html_data,height=550)
+st.components.v1.html(html_data,height=600)
