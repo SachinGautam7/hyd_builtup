@@ -1,11 +1,16 @@
 import streamlit as st
 
-path_to_html = "./hyd_builtup.html" 
+from streamlit_js_eval import streamlit_js_eval
 
-# Read file and keep in variable
-with open(path_to_html,'r') as f: 
-    html_data = f.read()
+st.write(f"Screen width is {streamlit_js_eval(js_expressions='screen.width', key = 'SCR')}")
+st.write(f"Screen height is {streamlit_js_eval(js_expressions='screen.height', key = 'SCR1')}")
 
-st.set_page_config(layout='wide')
-## Show in webpage
-st.components.v1.html(html_data, height=800, scrolling=False)
+# path_to_html = "./hyd_builtup.html" 
+
+# # Read file and keep in variable
+# with open(path_to_html,'r') as f: 
+#     html_data = f.read()
+
+# st.set_page_config(layout='wide')
+# ## Show in webpage
+# st.components.v1.html(html_data, height=)
