@@ -6,6 +6,6 @@ path_to_html = "./hyd_builtup.html"
 with open(path_to_html,'r') as f: 
     html_data = f.read()
 
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide', height='90vh')
 ## Show in webpage
 st.components.v1.html(html_data)
